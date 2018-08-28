@@ -5,8 +5,8 @@
 - speakers
 - talks
 - sponsors
+- events
+- organisers
 
 ## todo
 
-- events
-- organisers
