@@ -14,3 +14,8 @@ Route::prefix('sponsors')->namespace('Sponsors')->group(function () {
     Route::get('/', IndexController::class);
     Route::get('/{sponsor}', ShowController::class);
 });
+
+Route::prefix('organisers')->namespace('Organisers')->group(function () {
+    Route::get('/', IndexController::class);
+    Route::get('/{organiser}', ShowController::class);
+});
