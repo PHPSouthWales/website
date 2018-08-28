@@ -3,10 +3,10 @@
 ## done
 
 - speakers
+- talks
 
 ## todo
 
 - sponsors
 - events
-- talks
 - organisers

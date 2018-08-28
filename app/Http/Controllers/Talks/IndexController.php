@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Speakers;
+namespace App\Http\Controllers\Talks;
 
-use App\Models\Speaker;
+use App\Models\Talk;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
@@ -18,7 +18,7 @@ class IndexController extends Controller
     public function __invoke(Request $request) : JsonResponse
     {
         return response()->json([
-            'speakers' => Speaker::with('talks')->get()
+            'speakers' => Talk::with('speaker')->get()
         ]);
     }
 }

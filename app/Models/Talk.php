@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Speaker extends Model
+class Talk extends Model
 {
     protected $fillable = [
-        'firstname', 'lastname', 'slug', 'bio',
+        'title', 'slug', 'abstract',
     ];
 
     public function getRouteKeyName()
@@ -15,8 +15,8 @@ class Speaker extends Model
         return 'slug';
     }
 
-    public function talks()
+    public function speaker()
     {
-        return $this->hasMany(\App\Models\Talk::class);
+        return $this->belongsTo(\App\Models\Speaker::class);
     }
 }
