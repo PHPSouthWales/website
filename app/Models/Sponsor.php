@@ -13,4 +13,9 @@ class Sponsor extends Model implements HasMedia
     protected $fillable = [
         'name', 'slug', 'uri', 'description',
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
