@@ -2,13 +2,11 @@
 
 ## done
 
-
+- speakers
 
 ## todo
 
 - sponsors
-- speakers
 - events
 - talks
-- speakers
 - organisers
