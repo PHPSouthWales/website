@@ -19,3 +19,8 @@ Route::prefix('organisers')->namespace('Organisers')->group(function () {
     Route::get('/', IndexController::class);
     Route::get('/{organiser}', ShowController::class);
 });
+
+Route::prefix('events')->namespace('Events')->group(function () {
+    Route::get('/', IndexController::class);
+    Route::get('/{event}', ShowController::class);
+});
