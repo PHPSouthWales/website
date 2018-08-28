@@ -19,4 +19,9 @@ class Talk extends Model
     {
         return $this->belongsTo(\App\Models\Speaker::class);
     }
+
+    public function event()
+    {
+        return $this->belongsTo(\App\Models\Event::class);
+    }
 }

@@ -19,4 +19,9 @@ class Event extends Model
     {
         return 'slug';
     }
+
+    public function talks()
+    {
+        return $this->hasMany(\App\Models\Talk::class);
+    }
 }

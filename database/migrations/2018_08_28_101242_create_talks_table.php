@@ -16,12 +16,14 @@ class CreateTalksTable extends Migration
         Schema::create('talks', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('speaker_id')->index();
+            $table->unsignedInteger('event_id')->index();
             $table->string('title');
             $table->string('slug');
             $table->mediumText('abstract');
             $table->timestamps();
 
             $table->foreign('speaker_id')->references('id')->on('speakers');
+            $table->foreign('event_id')->references('id')->on('events');
         });
     }
 
