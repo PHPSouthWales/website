@@ -1,3 +1,4 @@
 import speakers from './speakers/routes'
+import sponsors from './sponsors/routes'
 
-export default [...speakers]
+export default [...speakers, ...sponsors]

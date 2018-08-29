@@ -54,8 +54,18 @@ class SyncCommand extends Command
         );
 
         array_map(function ($item) {
-            if (is_null(Event::where('meetup_id', $item->id)->first())) {
+            $event = Event::where('meetup_id', $item->id)->first();
+            if (is_null($event)) {
                 Event::create([
+                    'meetup_id' => $item->id,
+                    'title' => $item->name,
+                    'slug' => str_slug($item->name),
+                    'description' => $item->description,
+                    'future' => ($item->status === 'upcoming') ? true : false,
+                    'meetup_data' => json_encode($item)
+                ]);
+            } else {
+                $event->update([
                     'meetup_id' => $item->id,
                     'title' => $item->name,
                     'slug' => str_slug($item->name),
