@@ -1,3 +1,4 @@
 export default {
-    talks: []
+    talks: [],
+    talk: {}
 }

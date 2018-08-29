@@ -1,3 +1,4 @@
 export default {
-    organisers: []
+    organisers: [],
+    organiser: {}
 }

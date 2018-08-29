@@ -2,7 +2,9 @@
     <div>
         <ul>
             <li v-for="talk in talks" :key="talk.id">
-                {{ talk.title }}
+                <router-link :to="{ name: 'talks.show', params: { slug: talk.slug } }">
+                    {{ talk.title }}
+                </router-link>
             </li>
         </ul>
     </div>

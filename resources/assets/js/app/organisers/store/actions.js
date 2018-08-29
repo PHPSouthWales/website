@@ -5,3 +5,9 @@ export const getAll = ({ commit, dispatch }) => {
         commit('setOrganisers', response.data)
     })
 }
+
+export const getOne = ({ commit, dispatch }, { payload }) => {
+    return axios.get(`/api/organisers/${payload.slug}`).then((response) => {
+        commit('setOrganiser', response.data)
+    })
+}

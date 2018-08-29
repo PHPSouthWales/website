@@ -2,7 +2,9 @@
     <div>
         <ul>
             <li v-for="organiser in organisers" :key="organiser.id">
-                {{ organiser.firstname }} {{ organiser.lastname }}
+                <router-link :to="{ name: 'organisers.show', params: { slug: organiser.slug } }">
+                    {{ organiser.firstname }} {{ organiser.lastname }}
+                </router-link>
             </li>
         </ul>
     </div>

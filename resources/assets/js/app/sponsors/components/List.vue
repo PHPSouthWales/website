@@ -2,7 +2,9 @@
     <div>
         <ul>
             <li v-for="sponsor in sponsors" :key="sponsor.id">
-                {{ sponsor.name }}
+                <router-link :to="{ name: 'sponsors.show', params: { slug: sponsor.slug } }">
+                    {{ sponsor.name }}
+                </router-link>
             </li>
         </ul>
     </div>

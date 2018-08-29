@@ -5,3 +5,9 @@ export const getAll = ({ commit, dispatch }) => {
         commit('setSponsors', response.data)
     })
 }
+
+export const getOne = ({ commit, dispatch }, { payload }) => {
+    return axios.get(`/api/sponsors/${payload.slug}`).then((response) => {
+        commit('setSponsor', response.data)
+    })
+}
