@@ -1,10 +1,8 @@
 <template>
     <div>
         <ul>
-            <li v-for="speaker in speakers" :key="speaker.id">
-                <router-link :to="{ name: 'speakers.show', params: { slug: speaker.slug } }">
-                    {{ speaker.firstname }} {{ speaker.lastname }}
-                </router-link>
+            <li v-for="event in events" :key="event.id">
+                {{ event.title }}
             </li>
         </ul>
     </div>
@@ -16,14 +14,14 @@
 
     export default {
         computed: mapGetters({
-            speakers: 'speakers/get' 
+            events: 'events/get' 
         }),
         mounted() {
             this.get()
         },
         methods: {
             ...mapActions({
-                get: 'speakers/getAll'
+                get: 'events/getAll'
             })
         }
     }
