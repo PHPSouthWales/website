@@ -18,7 +18,7 @@ class IndexController extends Controller
     public function __invoke(Request $request) : JsonResponse
     {
         return response()->json([
-            'sponsors' => Sponsor::all()
+            'data' => Sponsor::all()
         ]);
     }
 }

@@ -18,7 +18,7 @@ class IndexController extends Controller
     public function __invoke(Request $request) : JsonResponse
     {
         return response()->json([
-            'events' => Event::all()
+            'data' => Event::all()
         ]);
     }
 }

@@ -18,7 +18,7 @@ class ShowController extends Controller
     public function __invoke(Request $request, Talk $talk) : JsonResponse
     {
         return response()->json([
-            'talk' => $talk
+            'data' => $talk
         ]);
     }
 }

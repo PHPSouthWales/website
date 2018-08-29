@@ -9,10 +9,11 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
-    "dependecies": {
+    "dependencies": {
         "axios": "^0.18",
         "vue": "^2.5.7",
-        "lodash": "^4.17.5"
+        "vue-router": "^3.0.1",
+        "vuex": "^3.0.1"
     },
     "devDependencies": {
         "cross-env": "^5.1",

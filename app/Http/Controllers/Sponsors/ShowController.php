@@ -19,7 +19,7 @@ class ShowController extends Controller
     public function __invoke(Request $request, Sponsor $sponsor) : JsonResponse
     {
         return response()->json([
-            'sponsor' => $sponsor
+            'data' => $sponsor
         ]);
     }
 }

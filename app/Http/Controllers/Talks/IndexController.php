@@ -18,7 +18,7 @@ class IndexController extends Controller
     public function __invoke(Request $request) : JsonResponse
     {
         return response()->json([
-            'speakers' => Talk::with('speaker')->get()
+            'data' => Talk::with('speaker')->get()
         ]);
     }
 }

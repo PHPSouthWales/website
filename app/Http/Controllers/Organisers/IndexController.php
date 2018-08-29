@@ -19,7 +19,7 @@ class IndexController extends Controller
     public function __invoke(Request $request) : JsonResponse
     {
         return response()->json([
-            'organisers' => Organiser::all()
+            'data' => Organiser::all()
         ]);
     }
 }

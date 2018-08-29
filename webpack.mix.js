@@ -15,7 +15,7 @@ require("laravel-mix-purgecss");
  */
 
 mix.js("resources/assets/js/app.js", "public/js")
-   .extract(['vue', 'axios', 'lodash'])
+   .extract(['vue', 'axios'])
    .postCss("resources/assets/css/app.css", "public/css")
    .tailwind()
    .purgeCss();
